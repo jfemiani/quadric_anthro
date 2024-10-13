@@ -36,7 +36,7 @@ class Quadric:
         
         return weights       
 
-    def fit(self, points, weights=None):
+    def fit(self, points, weights=None, max_samples=1000):  
         """
         Fits a general quadric surface to the data points.
 
@@ -48,9 +48,8 @@ class Quadric:
         """
 
         # We cannot handle more thant 46K points due to memory constraints.
-        if len(points) > 46000:
-            warnings.warn("Too many points, choosing a random subsample.")
-            sample = np.random.choice(len(points), size=46000, replace=False)
+        if len(points) > max_samples:
+            sample = np.random.choice(len(points), size=max_samples, replace=False)
             points = points[sample,:]
             if weights is not None:
                 weights = weights[sample]
