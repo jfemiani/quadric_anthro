@@ -209,9 +209,10 @@ class RotatedQuadratic:
 
         return points_unrotated
 
-    def fit(self, points, weights='gaussian', axis_order=None):
+    def fit(self, points, weights=None, axis_order=None):
         """
         Fits a rotated quadratic surface to the data points.
+
 
         Parameters:
             points (numpy.ndarray): Nx3 array of points.
