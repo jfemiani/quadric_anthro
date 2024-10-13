@@ -2,6 +2,13 @@
 
 This repository provides tools for fitting quadratic surfaces to 3D anthropological surfaces (such as bone surfaces) using Python. The core functionality includes fitting, visualizing, and extracting relevant geometric information from these surfaces, with an emphasis on handling rotated quadratic shapes.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/114o5kMU1V4EvpDFswi0S7-pFh2Mzx4hP?usp=sharing)
+![License](https://img.shields.io/github/license/jfemiani/quadric_anthro)
+[![GitHub issues](https://img.shields.io/github/issues/jfemiani/quadric_anthro)](https://github.com/jfemiani/quadric_anthro/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/jfemiani/quadric_anthro)](https://github.com/jfemiani/quadric_anthro)
+
+
+
 ## Repository Structure
 
 - **kappa/**: Contains the main modules used for fitting quadrics and performing rotations.
