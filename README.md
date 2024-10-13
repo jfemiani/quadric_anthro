@@ -68,8 +68,13 @@ The JSON file will be saved with the same name as the input CSV, replacing the `
 python scripts/fit_quadratic.py sample_data/bone_points.csv --show-plot
 ~~~
 
-This will fit a quadratic surface to the 3D points in `bone_points.csv` and display a 3D plot.
+This will fit a quadratic surface to the 3D points in `bone_points.csv` and display a 3D plot (in your browser)
 
 ## Visualization
 
 The fitted surface and original points can be visualized interactively using Plotly. If the `--show-plot` flag is provided, the 3D surface and points will be displayed in an interactive plot window.
+
+![alt text](images/image.png)
+
+![alt text](images/image-1.png)
+
