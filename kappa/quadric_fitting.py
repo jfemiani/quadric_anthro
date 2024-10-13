@@ -3,6 +3,7 @@ from scipy.linalg import svd
 from scipy.spatial.transform import Rotation as R
 import matplotlib.pyplot as plt
 from itertools import permutations
+import warnings
 
 class Quadric:
     """
@@ -45,6 +46,15 @@ class Quadric:
         Sets:
             self.coefficients (numpy.ndarray): Array of quadric coefficients.
         """
+
+        # We cannot handle more thant 46K points due to memory constraints.
+        if len(points) > 46000:
+            warnings.warn("Too many points, choosing a random subsample.")
+            sample = np.random.choice(len(points), size=46000, replace=False)
+            points = points[sample,:]
+            if weights is not None:
+                weights = weights[sample]
+
         # Extract X, Y, Z coordinates
         X = points[:, 0]
         Y = points[:, 1]
