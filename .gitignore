@@ -1,0 +1,19 @@
+# Ignore virtual environment folder
+/quadric_env/
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore environment variables file
+.env
+
+# Ignore data files (if they aren’t meant to be tracked)
+data/
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
