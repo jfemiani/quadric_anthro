@@ -54,7 +54,7 @@ class Quadric:
         D = np.column_stack([X**2, Y**2, Z**2, X * Y, X * Z, Y * Z, X, Y, Z, np.ones_like(X)])
 
         if weights is not None:
-            D = np.sqrt(np.clip(weights[:, None], min=0.0001)) * D
+            D = np.sqrt(np.clip(weights[:, None], a_min=0.0001)) * D
 
         # Solve for the quadric coefficients using SVD
         _, _, Vt = svd(D)
